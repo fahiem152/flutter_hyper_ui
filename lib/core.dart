@@ -5,7 +5,15 @@ it means you have to rename it to something more unique.
 */
 export 'package:hyper_ui/config.dart';
 export 'package:hyper_ui/core_package.dart';
-export 'package:hyper_ui/demo.dart';
+// export 'package:hyper_ui/demo.dart';
+export 'package:hyper_ui/module/auth/login/controller/login_controller.dart';
+export 'package:hyper_ui/module/auth/login/view/login_view.dart';
+export 'package:hyper_ui/module/auth/register/controller/register_controller.dart';
+export 'package:hyper_ui/module/auth/register/view/register_view.dart';
+export 'package:hyper_ui/module/category_form/controller/category_form_controller.dart';
+export 'package:hyper_ui/module/category_form/view/category_form_view.dart';
+export 'package:hyper_ui/module/category_list/controller/category_list_controller.dart';
+export 'package:hyper_ui/module/category_list/view/category_list_view.dart';
 export 'package:hyper_ui/module/dashboard/controller/dashboard_controller.dart';
 export 'package:hyper_ui/module/dashboard/view/dashboard_view.dart';
 export 'package:hyper_ui/module/debug/controller/debug_controller.dart';
@@ -16,6 +24,10 @@ export 'package:hyper_ui/module/main_navigation/controller/main_navigation_contr
 export 'package:hyper_ui/module/main_navigation/view/main_navigation_view.dart';
 export 'package:hyper_ui/module/order/controller/order_controller.dart';
 export 'package:hyper_ui/module/order/view/order_view.dart';
+export 'package:hyper_ui/module/product_form/controller/product_form_controller.dart';
+export 'package:hyper_ui/module/product_form/view/product_form_view.dart';
+export 'package:hyper_ui/module/product_list/controller/product_list_controller.dart';
+export 'package:hyper_ui/module/product_list/view/product_list_view.dart';
 export 'package:hyper_ui/module/profile/controller/profile_controller.dart';
 export 'package:hyper_ui/module/profile/view/profile_view.dart';
 export 'package:hyper_ui/setup.dart';
@@ -64,3 +76,5 @@ export 'package:hyper_ui/shared/widget/list/list_view.dart';
 export 'package:hyper_ui/shared/widget/typography/heading.dart';
 export 'package:hyper_ui/shared/widget/widget_demo/widget_demo.dart';
 export 'package:hyper_ui/state_util.dart';
+export 'core_package.dart';
+export 'setup.dart';

@@ -1,0 +1,15 @@
+{
+    "modules": [
+        "auth/login",
+        "auth/register",
+        "product_list",
+        "product_form",
+        "category_list",
+        "category_form"
+    ],
+    "module_directory_name": "module",
+    "experimental_mode": false,
+    "learning_mode": false,
+    "unfreezed": true,
+    "use_cubit": false
+}

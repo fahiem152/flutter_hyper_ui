@@ -8,16 +8,14 @@ class MainNavigationView extends StatefulWidget {
     controller.view = this;
 
     return DefaultTabController(
-      length: 4,
+      length: 2,
       initialIndex: controller.selectedIndex,
       child: Scaffold(
         body: IndexedStack(
           index: controller.selectedIndex,
           children: [
-            DashboardView(),
-            OrderView(),
-            FavoriteView(),
-            ProfileView(),
+            ProductListView(),
+            CategoryListView(),
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
@@ -28,37 +26,13 @@ class MainNavigationView extends StatefulWidget {
               icon: Icon(
                 MdiIcons.viewDashboard,
               ),
-              label: "Dashboard",
-            ),
-            BottomNavigationBarItem(
-              icon: Badge(
-                label: Text(
-                  "4",
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-                child: Icon(MdiIcons.table),
-              ),
-              label: "Order",
-            ),
-            BottomNavigationBarItem(
-              icon: Badge(
-                label: Text(
-                  "4",
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-                child: Icon(Icons.favorite),
-              ),
-              label: "Favorite",
+              label: "Product",
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.person,
+                MdiIcons.table,
               ),
-              label: "User",
+              label: "Category",
             ),
           ],
         ),
