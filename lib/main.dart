@@ -1,23 +1,24 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:graphql_flutter/graphql_flutter.dart';
-import 'package:hyper_ui/testting_something/crud_mysql/home_mysql_page.dart';
-import 'package:hyper_ui/testting_something/flutter-graphql/flutter_graphql_page.dart';
-import 'package:hyper_ui/testting_something/flutter-graphql/service/blog_service.dart';
-import 'package:hyper_ui/testting_something/shared_preferrences/local/app_local.dart';
-import 'package:hyper_ui/testting_something/shared_preferrences/local/user_local.dart';
-import 'package:hyper_ui/testting_something/shared_preferrences/setup_lodal.dart';
-import 'package:sentry_flutter/sentry_flutter.dart';
-import 'package:talker_flutter/talker_flutter.dart';
+import 'package:hyper_ui/testting_something/image_picker_web/flutter_image_web_page.dart';
+import 'package:hyper_ui/testting_something/websocket/binance_webscoket_page.dart';
+import 'package:hyper_ui/testting_something/websocket/websocket_page.dart';
+import 'package:hyper_ui/testting_something/work_manager/pages/work_manager_page.dart';
+import 'package:hyper_ui/testting_something/work_manager/service/location_service.dart';
+import 'package:hyper_ui/testting_something/work_manager/service/work_manager_service.dart';
 
 import 'package:hyper_ui/core.dart';
-import 'package:hyper_ui/testting_something/talker/talker_page.dart';
-import 'package:hyper_ui/testting_something/shared_preferrences/shared_preferences_page.dart';
+import 'package:web_socket_channel/io.dart';
 
-void main() {
-  runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // WidgetsFlutterBinding.ensureInitialized();
+  // CustomWorkManager.init();
+
+  // await BackgroundService.instance.init();
+  // setupLocator();
+  runApp(MainApp());
 }
 
 // class MyApp extends StatelessWidget {
@@ -119,10 +120,10 @@ void main() {
 // // }
 
 class MainApp extends StatelessWidget {
-  final Talker talker;
+  // final Talker talker;
   const MainApp({
     Key? key,
-    required this.talker,
+    // required this.talker,
   }) : super(key: key);
 
   @override
@@ -131,7 +132,10 @@ class MainApp extends StatelessWidget {
       navigatorKey: Get.navigatorKey,
       debugShowCheckedModeBanner: false,
       theme: getDefaultTheme(),
-      home: SharedPreferencesPage(),
+      // home: WebScoketPage(
+      //   channel: IOWebSocketChannel.connect("ws://echo.websocket.org"),
+      // ),
+      home: FlutterImageWebPage(),
       builder: (context, child) => DebugView(
         context: context,
         child: child,
@@ -140,6 +144,7 @@ class MainApp extends StatelessWidget {
     );
   }
 }
+
 
 // import 'dart:async';
 
