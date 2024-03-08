@@ -1,7 +1,9 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
 import 'package:flutter/material.dart';
+import 'package:hyper_ui/testting_something/device_info/device_info_page.dart';
 import 'package:hyper_ui/testting_something/image_picker_web/flutter_image_web_page.dart';
+import 'package:hyper_ui/testting_something/printer_bluetooth/manage_printer_page.dart';
 import 'package:hyper_ui/testting_something/websocket/binance_webscoket_page.dart';
 import 'package:hyper_ui/testting_something/websocket/websocket_page.dart';
 import 'package:hyper_ui/testting_something/work_manager/pages/work_manager_page.dart';
@@ -135,7 +137,7 @@ class MainApp extends StatelessWidget {
       // home: WebScoketPage(
       //   channel: IOWebSocketChannel.connect("ws://echo.websocket.org"),
       // ),
-      home: FlutterImageWebPage(),
+      home: ManagePrinterPage(),
       builder: (context, child) => DebugView(
         context: context,
         child: child,
