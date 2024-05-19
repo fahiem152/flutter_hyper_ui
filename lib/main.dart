@@ -1,8 +1,13 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hyper_ui/testting_something/device_info/device_info_page.dart';
 import 'package:hyper_ui/testting_something/image_picker_web/flutter_image_web_page.dart';
+import 'package:hyper_ui/testting_something/multiple_language/l10n/l10n.dart';
+import 'package:hyper_ui/testting_something/multiple_language/local_provider.dart';
+import 'package:hyper_ui/testting_something/multiple_language/localization_page.dart';
 import 'package:hyper_ui/testting_something/printer_bluetooth/manage_printer_page.dart';
 import 'package:hyper_ui/testting_something/websocket/binance_webscoket_page.dart';
 import 'package:hyper_ui/testting_something/websocket/websocket_page.dart';
@@ -11,7 +16,9 @@ import 'package:hyper_ui/testting_something/work_manager/service/location_servic
 import 'package:hyper_ui/testting_something/work_manager/service/work_manager_service.dart';
 
 import 'package:hyper_ui/core.dart';
+import 'package:provider/provider.dart';
 import 'package:web_socket_channel/io.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +27,12 @@ void main() async {
 
   // await BackgroundService.instance.init();
   // setupLocator();
-  runApp(MainApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => LocaleProvider(),
+      child: MainApp(),
+    ),
+  );
 }
 
 // class MyApp extends StatelessWidget {
@@ -130,14 +142,24 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localeProvider = Provider.of<LocaleProvider>(context);
     return MaterialApp(
+      supportedLocales: L10n.all,
+      locale: localeProvider.locale,
+
+      localizationsDelegates: [
+        AppLocalizations.delegate, // Add this line
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
       navigatorKey: Get.navigatorKey,
       debugShowCheckedModeBanner: false,
       theme: getDefaultTheme(),
       // home: WebScoketPage(
       //   channel: IOWebSocketChannel.connect("ws://echo.websocket.org"),
       // ),
-      home: ManagePrinterPage(),
+      home: LocalizationPages(),
       builder: (context, child) => DebugView(
         context: context,
         child: child,

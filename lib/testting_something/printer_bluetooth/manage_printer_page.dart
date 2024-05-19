@@ -6,6 +6,7 @@ import 'package:hyper_ui/testting_something/printer_bluetooth/menu_printer_butto
 import 'package:hyper_ui/testting_something/printer_bluetooth/menu_printer_content.dart';
 import 'package:hyper_ui/testting_something/printer_bluetooth/models/product_quantity.dart';
 import 'package:hyper_ui/testting_something/printer_bluetooth/models/product_response_model.dart';
+import 'package:hyper_ui/testting_something/printer_bluetooth/permession_printer.dart';
 import 'package:hyper_ui/testting_something/printer_bluetooth/print_dataoutputs.dart';
 import 'package:print_bluetooth_thermal/print_bluetooth_thermal.dart';
 
@@ -61,6 +62,7 @@ class _ManagePrinterPageState extends State<ManagePrinterPage> {
   }
 
   Future<void> initPlatformState() async {
+    PermessionPrinter().permessionPrinter();
     String platformVersion;
     int porcentbatery = 0;
     // Platform messages may fail, so we use a try/catch PlatformException.

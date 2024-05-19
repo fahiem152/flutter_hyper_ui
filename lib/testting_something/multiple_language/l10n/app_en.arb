@@ -1,0 +1,22 @@
+{
+  "intro": "Hello My Name is",
+  "@intro": {
+    "description": "Introduction"
+  },
+  "country": "Country",
+  "@country": {
+    "description": "The conventional newborn programmer greeting"
+  },
+  "language": "Language",
+  "@language": {
+    "description": "Language"
+  },
+  "city": "City",
+  "@city": {
+    "description": "City"
+  },
+  "year": "Year",
+  "@year": {
+    "description": "Year"
+  }
+}

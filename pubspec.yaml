@@ -66,6 +66,9 @@ dependencies:
   image_picker_web: ^3.1.1
   esc_pos_utils_plus: ^2.0.1+6
   print_bluetooth_thermal: ^1.1.0
+  flutter_localizations:
+    sdk: flutter
+  provider: ^6.1.2
   # stamp_image: ^0.0.2
   # image: ^4.1.4
 
@@ -78,9 +81,11 @@ dev_dependencies:
   freezed: ^2.4.5
   json_serializable: ^6.7.1
 flutter:
+  generate: true
   uses-material-design: true
   assets:
     - assets/icon/
     - assets/images/
     - assets/fonts/noto-sans.ttf
+    - assets/lang/
 
