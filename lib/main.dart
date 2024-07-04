@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:hyper_ui/testting_something/checker_internet/checker_internet_page.dart';
 import 'package:hyper_ui/testting_something/device_info/device_info_page.dart';
 import 'package:hyper_ui/testting_something/image_picker_web/flutter_image_web_page.dart';
 import 'package:hyper_ui/testting_something/multiple_language/l10n/l10n.dart';
@@ -18,7 +19,9 @@ import 'package:hyper_ui/testting_something/work_manager/service/work_manager_se
 import 'package:hyper_ui/core.dart';
 import 'package:provider/provider.dart';
 import 'package:web_socket_channel/io.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+// import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'testting_something/flutter_excel/excel_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -147,19 +150,20 @@ class MainApp extends StatelessWidget {
       supportedLocales: L10n.all,
       locale: localeProvider.locale,
 
-      localizationsDelegates: [
-        AppLocalizations.delegate, // Add this line
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
+      // localizationsDelegates: [
+      //   AppLocalizations.delegate, // Add this line
+      //   GlobalMaterialLocalizations.delegate,
+      //   GlobalWidgetsLocalizations.delegate,
+      //   GlobalCupertinoLocalizations.delegate,
+      // ],
       navigatorKey: Get.navigatorKey,
       debugShowCheckedModeBanner: false,
       theme: getDefaultTheme(),
       // home: WebScoketPage(
       //   channel: IOWebSocketChannel.connect("ws://echo.websocket.org"),
       // ),
-      home: LocalizationPages(),
+      // home: LocalizationPages(),
+      home: CheckerInternetPage(),
       builder: (context, child) => DebugView(
         context: context,
         child: child,
