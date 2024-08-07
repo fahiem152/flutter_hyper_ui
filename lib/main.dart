@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hyper_ui/testting_something/checker_internet/checker_internet_page.dart';
+import 'package:hyper_ui/testting_something/checker_internet/internet_connection_checker_plus/internet_connection_checker_plus_page.dart';
 import 'package:hyper_ui/testting_something/device_info/device_info_page.dart';
 import 'package:hyper_ui/testting_something/image_picker_web/flutter_image_web_page.dart';
 import 'package:hyper_ui/testting_something/multiple_language/l10n/l10n.dart';
@@ -163,7 +164,7 @@ class MainApp extends StatelessWidget {
       //   channel: IOWebSocketChannel.connect("ws://echo.websocket.org"),
       // ),
       // home: LocalizationPages(),
-      home: CheckerInternetPage(),
+      home: InternetConnectionCheckerPlusPage(),
       builder: (context, child) => DebugView(
         context: context,
         child: child,

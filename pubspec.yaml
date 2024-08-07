@@ -14,12 +14,12 @@ dependencies:
   google_fonts: ^4.0.4
   material_design_icons_flutter: ^7.0.7296
   file_picker: ^5.2.2
-  uuid: ^3.0.6
+  # uuid: ^3.0.6
   flutter_image_compress: ^2.0.3
   cached_network_image: ^3.3.1
   permission_handler: ^10.4.5 
   geolocator: ^9.0.2
-  flutter_map: ^4.0.0
+  # flutter_map: ^4.0.0
   carousel_slider: ^4.1.1
   flutter_rating_bar: ^4.0.1
   url_launcher: ^6.2.4
@@ -70,7 +70,8 @@ dependencies:
     sdk: flutter
   provider: ^6.1.2
   syncfusion_flutter_xlsio: ^26.1.35
-  connectivity_plus: ^3.0.6
+  # connectivity_plus: ^3.0.6
+  internet_connection_checker_plus: ^2.5.0
   # stamp_image: ^0.0.2
   # image: ^4.1.4
 
